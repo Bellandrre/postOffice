@@ -7,7 +7,7 @@ PORT = '3000'
 def client():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) 
 
-    s.connect((HOST, PORT))
+    s.connect((HOST, PORT)) # connect to make sure the client does not receive data from other servers
 
     inputMessage = input('Input lowercase sentence: ')
     data = inputMessage.encode('ascii')
